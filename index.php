@@ -105,7 +105,7 @@ foreach ($stories as $story) {
         <div class="story-grid">
             <?php foreach ($stories as $story): ?>
                 <a class="story-card <?= $story['id'] === $current['id'] ? 'active' : '' ?>"
-                   href="?cerita=<?= urlencode($story['id']) ?>#cerita">
+                   href="?cerita=<?= urlencode($story['id']) ?>#baca-cerita">
                     <div class="story-image">
                         <img src="<?= htmlspecialchars($story['image']) ?>" alt="<?= htmlspecialchars($story['title']) ?>">
                         <span><?= htmlspecialchars($story['category']) ?></span>
@@ -120,7 +120,7 @@ foreach ($stories as $story) {
         </div>
     </section>
 
-    <section class="reading section">
+    <section class="reading section" id="baca-cerita">
         <div class="reading-top">
             <div>
                 <span class="section-label">03 — BACA CERITA</span>
